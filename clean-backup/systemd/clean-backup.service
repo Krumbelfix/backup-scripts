@@ -1,0 +1,10 @@
+[Unit]
+Description=Clean Backup
+Wants=clean-backup.timer
+
+[Service]
+Type=oneshot
+ExecStart=/home/melchiorreimers/backup-scripts/clean-backup/clean.sh
+
+[Install]
+WantedBy=multi-user.target

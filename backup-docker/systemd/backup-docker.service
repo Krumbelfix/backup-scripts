@@ -1,0 +1,10 @@
+[Unit]
+Description=Backup Docker Directory
+Wants=backup-docker.timer
+
+[Service]
+Type=oneshot
+ExecStart=/home/melchiorreimers/backup-scripts/backup-docker/backup.sh
+
+[Install]
+WantedBy=multi-user.target

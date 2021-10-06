@@ -1,0 +1,10 @@
+[Unit]
+Description=Backup Home Directory
+Wants=backup-home.timer
+
+[Service]
+Type=oneshot
+ExecStart=/home/melchiorreimers/backup-scripts/backup-home/backup.sh
+
+[Install]
+WantedBy=multi-user.target

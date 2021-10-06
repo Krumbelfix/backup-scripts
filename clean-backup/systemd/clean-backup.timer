@@ -1,0 +1,11 @@
+[Unit]
+Description=clean Backup
+Requires=backup-home.service
+
+[Timer]
+OnCalendar=Sun *-* 01:0
+Unit=backup-home.service
+Persistent=true
+
+[Install]
+WantedBy=timers.target

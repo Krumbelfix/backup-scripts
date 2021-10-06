@@ -1,0 +1,10 @@
+[Unit]
+Description=Backup Docker-Directory
+Requires=backup-docker.service
+
+[Timer]
+OnCalendar=*-*-* 02:0
+Unit=backup-docker.service
+
+[Install]
+WantedBy=timers.target
